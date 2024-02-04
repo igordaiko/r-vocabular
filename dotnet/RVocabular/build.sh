@@ -1,4 +1,4 @@
-rmdir /s/q out
+rm -rf out
 
 dotnet publish -c Release -p:DebugType=None -p:DebugSymbols=false -p:PublishProfile=default -p:TargetRuntimeIdentifier=linux-x64 ./RVocabular.Host -o ./out
 
