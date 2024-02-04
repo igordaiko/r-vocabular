@@ -4,8 +4,6 @@ dotnet publish -c Release -p:DebugType=None -p:DebugSymbols=false -p:PublishProf
 
 cd out && tar -czvf ../r-vocabular-host.tar.gz ./* && cd ..
 
-cd ..\..\keys
-
 scp -i private_key ../dotnet/RVocabular/r-vocabular-host.tar.gz ${USER_NAME}@${HOST_NAME_1}:/r-vocabular-host
 scp -i private_key ../dotnet/RVocabular/r-vocabular-host.tar.gz ${USER_NAME}@${HOST_NAME_2}:/r-vocabular-host
 
