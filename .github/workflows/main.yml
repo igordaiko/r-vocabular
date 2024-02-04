@@ -20,4 +20,6 @@ jobs:
           HOST_NAME: ${{secrets.HOST_NAME}}
           USER_NAME: ${{secrets.USER_NAME}}
 
-        run: dotnet/RVocabular/build.sh
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          sh dotnet/RVocabular/build.sh
