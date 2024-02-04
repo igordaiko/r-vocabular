@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "RVocabular",
+  "version": "1.0",
+  "permissions": ["notifications",  "contextMenus",  "storage",  "cookies",  "tabs", "webRequest"],
+  "host_permissions": [
+    "https://localhost:*/*",
+    "http://localhost:*/*"
+  ],
+  "content_security_policy": {
+    "script-src": ["'self'", "https://accounts.google.com", "'wasm-unsafe-eval'", "'inline-speculation-rules'","http://127.0.0.1:*", "http://ec2-18-156-78-200.eu-central-1.compute.amazonaws.com"]
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+        "16": "static/icon/icon-16.png",
+        "48": "static/icon/icon-48.png",
+        "128": "static/icon/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "js": ["scripts/select.js"],
+      "css": ["static/styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
+  },
+  "icons": {
+      "16": "static/icon/icon-16.png",
+      "48": "static/icon/icon-48.png",
+      "128": "static/icon/icon-128.png"
+  }
+}

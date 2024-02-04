@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>r-vocabular</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Api.Gax" Version="4.4.0" />
+      <PackageReference Include="Google.Apis.Translate.v3" Version="1.64.0.3256" />
+      <PackageReference Include="linq2db" Version="5.3.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RVocabular.Data\RVocabular.Data.csproj" />
+      <ProjectReference Include="..\RVocabular.Models\RVocabular.Models.csproj" />
+      <ProjectReference Include="..\RVocabular.Service\RVocabular.Service.csproj" />
+    </ItemGroup>
+
+</Project>

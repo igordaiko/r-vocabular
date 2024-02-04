@@ -1,0 +1,172 @@
+#rvocabular-root {
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: image-size !important;
+    min-width: image-size !important;
+    max-width: image-size !important;
+    height: image-size !important;
+    min-height: image-size !important;
+    max-height: image-size !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: fixed !important;
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    z-index: 2147483647 !important;
+    box-sizing: content-box !important;
+    overflow: hidden !important;
+    border: none !important;
+    transition: box-shadow 200ms ease-in-out, transform 300ms ease !important;
+    animation: fade-in 300ms ease-in-out !important;
+
+
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.ant-drawer {
+    z-index: 2147483647 !important;
+}
+
+
+
+.rvocabular-translate-button {
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: image-size !important;
+    min-width: image-size !important;
+    max-width: image-size !important;
+    height: image-size !important;
+    min-height: image-size !important;
+    max-height: image-size !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: fixed !important;
+    box-shadow: 0px 0px 2px 2px #ddd !important;
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    z-index: 2147483647 !important;
+    box-sizing: content-box !important;
+    overflow: hidden !important;
+    border: none !important;
+    transition: box-shadow 200ms ease-in-out, transform 300ms ease !important;
+    animation: fade-in 300ms ease-in-out !important;
+    color: #000;
+    font-size: 14px;
+}
+
+
+.rvocabular-translate-button:hover {
+    box-shadow: 0px 0px 8px 3px #bbb !important;
+    transform: rotate(180deg) !important;
+}
+
+.rvocabular-drawer {
+    z-index: 2147483647 !important;
+    background: #eee !important;
+    color: #000;
+}
+
+.rvocabular-word {
+    font-weight: 700;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    height: auto;
+    padding-left: 0;
+    padding-bottom: 12px;
+}
+
+.rvocabular-block {
+    min-height: 50px;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+.rvocabular-add-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 32px !important;
+    padding-inline-start: 15px !important;
+    padding-inline-end: 15px !important;
+}
+
+.rvocabular-custom-translation-block {
+    margin-top: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    
+    .ant-input {
+        width: 85%;
+        background: none;
+        border: none;
+        border-radius: 0;
+        padding-left: 0;
+    }
+
+    .ant-input:focus {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+.rvocabular-definition {
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    align-items: baseline;
+    padding: 12px;
+}
+
+.rvocabular-tags {
+    font-size:11px;
+    margin-right: 4px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 8px;
+}
+
+.rvocabular-subtitle {
+    background: none;
+    font-weight: 500;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    height: auto;
+    padding-left: 0;
+    padding-bottom: 12px;
+    margin-top: 32px;
+}
+
+.rvocabular-synonyms {
+    margin-top: 20px;
+}
+
+
+.rvocabular-synonym-value {
+    color: rgba(0, 0, 0, 0.5);
+    margin-right: 4px;
+}
+

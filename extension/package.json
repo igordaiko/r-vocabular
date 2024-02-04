@@ -1,0 +1,62 @@
+{
+    "name": "r-vocabular",
+    "version": "1.0.0",
+    "targets": {
+        "src": {
+            "source": [
+                "./src/index.html"
+            ],
+            "distDir": "./build"
+        },
+        "background": {
+            "source": [
+                "./src/scripts/background.js",
+                "./src/scripts/select.js"
+            ],
+            "distDir": "./build/scripts"
+        }
+    },
+    "staticFiles": [
+        {
+            "staticPath": "src/manifest.json",
+            "distDir": "./build"
+        },
+        {
+            "staticPath": "src/static",
+            "distDir": "./build/static"
+        }
+    ],
+    "scripts": {
+        "start": "run-s start:bundle",
+        "start:bundle": "node build.mjs",
+        "build": "parcel build",
+        "postbuild": "start http://reload.extensions"
+    },
+    "devDependencies": {
+        "@parcel/transformer-typescript-tsc": "^2.10.3",
+        "@types/chrome": "^0.0.249",
+        "node-fetch": "^3.3.2",
+        "parcel": "^2.10.3",
+        "parcel-reporter-static-files-copy": "^1.5.3",
+        "postcss": "^8.4.32",
+        "postcss-custom-media": "^10.0.2",
+        "postcss-custom-properties": "^13.3.2",
+        "postcss-modules": "^6.0.0",
+        "postcss-nested": "^6.0.1",
+        "process": "^0.11.10"
+    },
+    "dependencies": {
+        "@parcel/config-default": "^2.10.1",
+        "@parcel/core": "^2.10.1",
+        "@types/react": "^18.2.34",
+        "@types/react-dom": "^18.2.14",
+        "antd": "^5.10.3",
+        "autoprefixer": "^10.4.16",
+        "es5": "^1.0.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-import": "^15.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "qs": "^6.11.2"
+    }
+}

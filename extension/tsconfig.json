@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "jsx": "react",
+      "types": ["chrome"],
+      "esModuleInterop": true,
+      "lib": ["dom", "es2022"],
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "isolatedModules": true,
+      "experimentalDecorators": true
+    }
+}
