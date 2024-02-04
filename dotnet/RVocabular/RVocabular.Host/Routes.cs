@@ -11,7 +11,7 @@ public static class Routes
     {
         app.MapGet("/", ([FromServices] Settings settings) =>
         {
-            return $"From Instance ${settings.MachineId}";
+            return $"From Instance {settings.MachineId}";
         });
 
         app.MapGet("/translate", ([FromQuery] string word, [FromServices] TranslateService service) =>
